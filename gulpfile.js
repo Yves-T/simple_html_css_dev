@@ -37,7 +37,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('sass/*.scss', ['styles']);
+    gulp.watch('sass/*.scss', ['styles'], notifyLiveReload);
     gulp.watch('*.html', notifyLiveReload);
     gulp.watch('css/*.css', notifyLiveReload);
 });
