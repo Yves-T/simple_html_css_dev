@@ -29,7 +29,7 @@ function notifyLiveReload(event) {
 }
 
 gulp.task('styles', function () {
-    return sass('sass', {style: 'expanded'})
+    return sass('sass/**/*.scss', {style: 'expanded'})
         .pipe(gulp.dest('css'))
         .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
